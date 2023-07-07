@@ -1,6 +1,6 @@
 import { AlertProp } from './alert.interface';
 import { headingType } from './alert.interface';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Alert = ({
   type = headingType.information,
@@ -10,6 +10,8 @@ const Alert = ({
   onClose,
 }: AlertProp) => {
   const [visible, setVisible] = useState(true);
+  useEffect(() => console.log('Some effect'), [visible]);
+
   if (!visible) {
     return null;
   }
