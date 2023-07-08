@@ -1,5 +1,5 @@
-import { AlertProp } from './alert.interface';
-import { headingType } from './alert.interface';
+import { AlertProp } from '../alert.interface';
+import { headingType } from '../alert.interface';
 import { useEffect, useState } from 'react';
 import { ReactComponent as WarningIcon } from '../assets/warning.svg';
 import { ReactComponent as InfoIcon } from '../assets/info.svg';

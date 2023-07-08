@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useRef } from 'react';
-import { getPerson } from './getPerson';
+import { getPerson } from '../getPerson';
 
 type State = {
   name: string | undefined;

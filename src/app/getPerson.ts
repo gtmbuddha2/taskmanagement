@@ -1,6 +1,4 @@
-export type Person = {
-  name: string;
-};
+import { Person } from './interfaces/person.interface';
 
 export function getPerson(): Promise<Person> {
   return new Promise((resolve) =>

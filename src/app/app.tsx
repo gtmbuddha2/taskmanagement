@@ -1,8 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Alert from './Alert';
-import PersonScore from './PersonScore';
-import PersonScoreReducer from './PersonScoreReducer';
-import { headingType } from './alert.interface';
+import Alert from './Components/Alert';
+import PersonScore from './Components/PersonScore';
+import PersonScoreReducer from './Components/PersonScoreReducer';
 
 export function App() {
   return (
