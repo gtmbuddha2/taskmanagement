@@ -5,6 +5,7 @@ import { ProductPage } from './app/Components/pages/ProductPage';
 import { ErrorPage } from './app/Components/pages/ErrorPage';
 import { HomePage } from './app/Components/pages/HomePage';
 import { lazy, Suspense } from 'react';
+import { ContactPage } from './app/Components/pages/ContactPage';
 
 const AdminPage = lazy(() => import('./app/Components/pages/AdminPage'));
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             <AdminPage />
           </Suspense>
         ),
+      },
+      {
+        path: 'contact',
+        element: <ContactPage />,
       },
     ],
   },
