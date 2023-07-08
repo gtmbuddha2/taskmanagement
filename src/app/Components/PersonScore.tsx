@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPerson } from '../getPerson';
+import { getPerson } from '../utils/getPerson';
 
 export default function PersonScore() {
   const [name, setName] = useState<string | undefined>();

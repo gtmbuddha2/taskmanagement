@@ -1,4 +1,4 @@
-import { Person } from './interfaces/person.interface';
+import { Person } from '../interfaces/person.interface';
 
 export function getPerson(): Promise<Person> {
   return new Promise((resolve) =>
