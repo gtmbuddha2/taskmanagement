@@ -1,9 +1,9 @@
-import { AlertProp } from '../alert.interface';
-import { headingType } from '../alert.interface';
+import { AlertProp } from '../interfaces/alert.interface';
+import { headingType } from '../interfaces/alert.interface';
 import { useEffect, useState } from 'react';
-import { ReactComponent as WarningIcon } from '../assets/warning.svg';
-import { ReactComponent as InfoIcon } from '../assets/info.svg';
-import { ReactComponent as CrossIcon } from '../assets/cross.svg';
+import { ReactComponent as WarningIcon } from '../../assets/warning.svg';
+import { ReactComponent as InfoIcon } from '../../assets/info.svg';
+import { ReactComponent as CrossIcon } from '../../assets/cross.svg';
 
 const Alert = ({
   type = headingType.information,
