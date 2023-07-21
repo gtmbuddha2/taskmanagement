@@ -6,12 +6,12 @@ export function Header() {
 
   return (
     <header className="text-center text-slate-500 bg-slate-900 h-40 p-5">
-      <Form action="/products">
+      <Form action="/products" className="relative text-right">
         <input
           type="search"
           name="search"
           placeholder="Search"
-          defaultValue={searchParams.get('search') ?? ''}
+          defaultValue={searchParams.get('search') ?? ''} //nullish coalescing operator
           className="absolute right-0 top-0 rounded py-2 px-3 text-gray-700"
         />
       </Form>
