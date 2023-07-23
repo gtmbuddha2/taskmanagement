@@ -1,5 +1,6 @@
 import { useForm, FieldError } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { ValidationError } from 'src/ValidationError';
 
 type Contact = {
   name: string;
@@ -13,7 +14,10 @@ export function ContactPage() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Contact>();
+  } = useForm<Contact>({
+    mode: 'onBlur',
+    reValidateMode: 'onBlur',
+  });
   const navigate = useNavigate();
 
   const fieldStyle = 'flex flex-col mb-2';
@@ -42,6 +46,7 @@ export function ContactPage() {
             {...register('name', { required: 'You must enter your name' })}
             className={getEditorStyle(errors.name)}
           />
+          <ValidationError fieldError={errors.name} />
         </div>
         <div className={fieldStyle}>
           <label htmlFor="email">Your email address</label>
@@ -57,6 +62,7 @@ export function ContactPage() {
             })}
             className={getEditorStyle(errors.email)}
           />
+          <ValidationError fieldError={errors.email} />
         </div>
         <div className={fieldStyle}>
           <label htmlFor="reason">Reason you need to contact us</label>
@@ -72,6 +78,7 @@ export function ContactPage() {
             <option value="Feedback">Feedback</option>
             <option value="Other">Other</option>
           </select>
+          <ValidationError fieldError={errors.reason} />
         </div>
 
         <div className={fieldStyle}>
