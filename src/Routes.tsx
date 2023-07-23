@@ -5,10 +5,7 @@ import { ProductPage } from './app/Components/pages/ProductPage';
 import { ErrorPage } from './app/Components/pages/ErrorPage';
 import { HomePage } from './app/Components/pages/HomePage';
 import { lazy, Suspense } from 'react';
-import {
-  ContactPage,
-  contactPageAction,
-} from './app/Components/pages/ContactPage';
+import { ContactPage } from './app/Components/pages/ContactPage';
 import { ThankYouPage } from './app/Components/pages/ThankYouPage';
 
 const AdminPage = lazy(() => import('./app/Components/pages/AdminPage'));
