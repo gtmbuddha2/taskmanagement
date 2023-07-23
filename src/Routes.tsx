@@ -39,7 +39,6 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <ContactPage />,
-        action: contactPageAction,
       },
       {
         path: '/thank-you/:name',
